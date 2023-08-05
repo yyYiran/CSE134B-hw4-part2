@@ -1,6 +1,17 @@
 {
   "data": [
-    {"title": "Project 1",
-    "description": "gsuyvgcdycvw"}
+    {"title": "Project 1 - remote",
+    "img": "https://source.unsplash.com/random/",
+    "alt": "p1",
+    "description": "project 1 is a random project with random stuff place holder"},
+
+    {"title": "Project 2 - remote",
+    "img": "https://source.unsplash.com/random/",
+    "alt": "p2",
+    "description": "priject 2 is a another random project, remote remote!!!"},
+
+    {"title": "Project 3 - remote",
+    "alt": "p3",
+    "description": "project 3 uses default image"}
   ]
 }

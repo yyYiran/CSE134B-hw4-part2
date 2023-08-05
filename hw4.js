@@ -1,3 +1,8 @@
+let remoteBtn = document.getElementById("remoteBtn");
+remoteBtn.addEventListener("click", function(){
+  alert("Efef")
+})
+
 class ProjectCard extends HTMLElement {
   constructor() {
       super();
