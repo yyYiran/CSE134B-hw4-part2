@@ -1,8 +1,5 @@
 let output = document.querySelector("output");
-let remoteBtn = document.getElementById("remoteBtn");
-remoteBtn.addEventListener("click", function(){
-  
-})
+
 
 class ProjectCard extends HTMLElement {
   constructor() {
@@ -80,6 +77,7 @@ const localData = [
 ]
 localStorage.setItem('data', JSON.stringify(localData));
 
+
 let localBtn = document.getElementById("localBtn");
 localBtn.addEventListener("click", function(){
   output.innerHTML = "";
@@ -98,6 +96,28 @@ localBtn.addEventListener("click", function(){
     link="${project.link}"></project-card>`
   }
   
+})
+
+let remoteBtn = document.getElementById("remoteBtn");
+remoteBtn.addEventListener("click", function(){
+  output.innerHTML = "";
+  fetch("https://my-json-server.typicode.com/yyYiran/CSE134B-hw4-part2/data")
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+  })
+  .then(data => {
+    for (project of data){
+      output.innerHTML+=`<project-card title="${project.title}" description="${project.description}" 
+    img="${project.img}" alt=${project.alt}
+    link="${project.link}"></project-card>`
+    }
+  })
+  .catch(error => {
+    console.error("Error", error)
+  })
 })
 
 
