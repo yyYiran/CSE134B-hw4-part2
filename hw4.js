@@ -1,6 +1,7 @@
+let output = document.querySelector("output");
 let remoteBtn = document.getElementById("remoteBtn");
 remoteBtn.addEventListener("click", function(){
-  alert("Efef")
+  
 })
 
 class ProjectCard extends HTMLElement {
@@ -38,7 +39,10 @@ class ProjectCard extends HTMLElement {
         display:flex;
         flex-direction: column;
         border: 1px black solid; 
-        width: 500px;
+      }
+      .card img {
+        width: 200px;
+        height: 200px;
       }
       .card h2{
         text-align: center;
@@ -52,3 +56,48 @@ class ProjectCard extends HTMLElement {
 
 // Define the custom element "custom-button"
 customElements.define('project-card', ProjectCard);
+
+
+const localData = [
+  {"title": "Project 1 - local",
+  "img": "https://source.unsplash.com/random/?flower",
+  "alt": "p1",
+  "description": "project 1 is a LOCAL random project with flower flower", 
+ "link": "https://ucsd.edu/"},
+  
+
+  {"title": "Project 2 - local",
+  "img": "https://source.unsplash.com/random/?dog",
+  "alt": "p2",
+  "description": "priject 2 is a another random dog dog, local local!!!", 
+"link": "https://www.ucla.edu/"},
+
+  {"title": "Project 3 - local",
+  "alt": "p3",
+  "img": "https://source.unsplash.com/random/?cake",
+  "description": "project 3 uses another cake", 
+  "link": "https://www.ucdavis.edu/"}
+]
+localStorage.setItem('data', JSON.stringify(localData));
+
+let localBtn = document.getElementById("localBtn");
+localBtn.addEventListener("click", function(){
+  output.innerHTML = "";
+  const data = JSON.parse(localStorage.getItem('data'));
+  // console.log(data)xw
+  for (project of data){
+    console.log(project.title)
+    // const card = document.createElement("project-card")
+    // card.setAttribute("title", project.title);
+    // card.setAttribute("description", project.description);
+    // card.setAttribute("img", project.img);
+    // card.setAttribute("alt", project.alt);
+    
+    output.innerHTML+=`<project-card title="${project.title}" description="${project.description}" 
+    img="${project.img}" alt=${project.alt}
+    link="${project.link}"></project-card>`
+  }
+  
+})
+
+
