@@ -1,21 +1,21 @@
 {
   "data": [
-    {"title": "Project 1 - local",
-  "img": "https://source.unsplash.com/random/?flower",
+    {"title": "Project 1 - remote",
+  "img": "https://source.unsplash.com/random/?girl",
   "alt": "p1",
-  "description": "project 1 is a LOCAL random project with flower flower", 
+  "description": "project 1 is a REMOTE random project of a girl", 
  "link": "https://ucsd.edu/"},  
 
-  {"title": "Project 2 - local",
-  "img": "https://source.unsplash.com/random/?dog",
+  {"title": "Project 2 - remote",
+  "img": "https://source.unsplash.com/random/?shark",
   "alt": "p2",
-  "description": "priject 2 is a another random dog dog, local local!!!", 
+  "description": "priject 2 is a another random SHARK, REMOTE REMOTE!!!", 
 "link": "https://www.ucla.edu/"},
 
-  {"title": "Project 3 - local",
+  {"title": "Project 3 - remote",
   "alt": "p3",
-  "img": "https://source.unsplash.com/random/?cake",
-  "description": "project 3 uses another cake", 
+  "img": "https://source.unsplash.com/random/?cash",
+  "description": "project 3 uses picture of CASH $$$", 
   "link": "https://www.ucdavis.edu/"}
   ]
 }

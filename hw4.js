@@ -41,8 +41,8 @@ class ProjectCard extends HTMLElement {
         border: 1px black solid; 
       }
       .card img {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
       }
       .card h2{
         text-align: center;
