@@ -4,8 +4,7 @@
   "img": "https://source.unsplash.com/random/?flower",
   "alt": "p1",
   "description": "project 1 is a LOCAL random project with flower flower", 
- "link": "https://ucsd.edu/"},
-  
+ "link": "https://ucsd.edu/"},  
 
   {"title": "Project 2 - local",
   "img": "https://source.unsplash.com/random/?dog",
